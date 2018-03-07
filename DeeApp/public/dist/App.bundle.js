@@ -83,7 +83,12 @@ function autocomplete(input, latInput, lngInput) {
 
     dropdown.addListener('place_changed', function () {
         var place = dropdown.getPlace();
-        console.log(place);
+        latInput.value = place.geometry.location.lat();
+        lngInput.value = place.geometry.location.lng();
+    });
+    //if someone hits enter on address field, do not submit
+    input.on('keydown', function (e) {
+        if (e.keyCode === 13) e.preventDefault();
     });
 }
 
