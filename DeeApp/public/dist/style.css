@@ -592,6 +592,8 @@ label {
     border-radius: 3px; }
   .flash--success {
     background: linear-gradient(135deg, #d2ff52 0%, #91e842 100%); }
+  .flash--errors {
+    background: linear-gradient(20deg, red 0%, #c80000 100%); }
   .flash--error {
     background: linear-gradient(20deg, red 0%, #c80000 100%); }
   .flash--info {
