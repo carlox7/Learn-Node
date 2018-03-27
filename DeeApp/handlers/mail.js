@@ -13,10 +13,29 @@ const transport = nodemailer.createTransport({
     }
 });
 
+// const generateHTML = (filename, options = {}) => {
+//     const html = pug.renderFile(`${__dirname}/../views/email/${filename}.pug`, options);
+//     console.log(html);
+//     return html;
+// }
+
+// exports.send = async (options) => {
+//     const html = generateHTML(options.filename, options);
+//     const mailOptions = {
+//         from: `Carlo Santos <noreply@carlosantos.me>`,
+//         to: options.user.email,
+//         subject: options.subject,
+//         html,
+//         text: 'this will be changed too'
+//     };
+//     const sendMail = promisify(transport.sendMail, transport);
+//     return sendMail(mailOptions);
+// }
+
 transport.sendMail({
-    from: 'Carlo Santos <carlox7@gmail.com>',
-    to: 'randy@example.com',
-    subject: 'testing testing 123',
-    html: 'hey I <strong>love</strong> you',
-    text: 'Hey I **LOVE** you'
+    from: 'carlo <carlox7@gmail.com',
+    to: 'bob@bob.com',
+    subject: 'testing',
+    html: 'hey <strong>you</strong>',
+    text: 'hey you'
 });
